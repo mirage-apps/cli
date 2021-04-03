@@ -2,8 +2,10 @@
 
 The **Command-Line Interface** for Mirage Stores
 
-Setup:
+## Installation
+bash
 
+### Development
 **Generate the binary and run binary**:
 ```cpp
 make

@@ -4,7 +4,20 @@
 using namespace std;
 
 void help(){
-    cout << "";
+    string help = 
+    " \
+    USAGE \
+    $ mirage install pacakge \n \
+    OPTION \
+    install                 To install a package \
+    uninstall               To uninstall a package \
+    help                    Show this menu \n \
+    FLAGS \
+    -i, --info              More info about the package \
+    ";
+
+    cout << help;
+    
 }
 
 void removeBinary(char **bin, int len){
@@ -20,7 +33,6 @@ void downloadBinary(char **bin, int len){
 int main(int argc, char **argv){
     if(argc){
         if(strcmp(argv[1], "install")){
-            cout<<2;
             downloadBinary(&argv[2], argc-2);
         }
         else if(strcmp(argv[1], "uninstall")){
