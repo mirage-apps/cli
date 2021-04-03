@@ -9,6 +9,9 @@ CFLAGS  = -Wall
 TARGET = src/main
 
 BIN = bin/mirage
+
+.PHONY: all setup submodules execute clean
+
 all: $(TARGET)
 	bin/mirage
 	rm -rf bin/*
