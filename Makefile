@@ -10,7 +10,10 @@ TARGET = src/main
 
 BIN = bin/mirage
 all: $(TARGET)
+	bin/mirage
+	rm -rf bin/*
 
+binary: $(TARGET)
 $(TARGET): $(TARGET).cpp
 	$(CC) $(CFLAGS) -o $(BIN) $(TARGET).cpp
 
