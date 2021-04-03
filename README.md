@@ -3,8 +3,9 @@
 The **Command-Line Interface** for Mirage Stores
 
 ## Installation
+```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mirage-apps/cli/master/install.sh)"
-
+```
 
 ### Development
 **Generate the binary and run binary**:
