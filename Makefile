@@ -1,5 +1,18 @@
-CC=g++
+# the compiler: gcc for C program, define as g++ for C++
+CC = g++
+# compiler flags:
+#  -g     - this flag adds debugging information to the executable file
+#  -Wall  - this flag is used to turn on most compiler warnings
+CFLAGS  = -Wall
 
-bin: $(CC) -o bin/mirage src/main.cpp
+# The build target 
+TARGET = src/main
 
-clean: rm -rf bin/*
+BIN = bin/mirage
+all: $(TARGET)
+
+$(TARGET): $(TARGET).cpp
+	$(CC) $(CFLAGS) -o $(BIN) $(TARGET).cpp
+
+clean:
+	rm -rf bin/*
